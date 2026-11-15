@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Exploration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #000 no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card h2 {
+            padding: 10px;
+            font-size: 1.5em;
+            margin: 0;
+            background-color: #333;
+        }
+
+        .card p {
+            padding: 10px;
+            font-size: 1em;
+            background-color: #444;
+            margin: 0;
+        }
+
+        .card a {
+            display: block;
+            padding: 10px;
+            background-color: #FF6347;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .card a:hover {
+            background-color: #FF4500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Explore the Solar System</h1>
+</header>
+
+<div class="card-container">
+    <!-- Card for the Solar System Overview -->
+    <div class="card">
+        <img src="solar_system.jpg" alt="Solar System">
+        <h2>Solar System Overview</h2>
+        <p>Explore the solar system with a comprehensive overview of all planets, moons, and the sun.</p>
+        <a href="https://youtu.be/libKVRa01L8?si=4-GDTXo1xu8z7o8Z" target="_blank">Watch Video</a>
+    </div>
+
+    <!-- Card for Each Planet -->
+    <div class="card">
+        <img src="sun.png" alt="Planet">
+        <h2>The Sun</h2>
+        <p>Discover our Star.</p>
+        <a href="https://youtu.be/2HoTK_Gqi2Q?si=q77m_dyg8xQL7bZZ" target="_blank">Watch Video</a>
+    </div>
+    <div class="card">
+        <img src="mercury.png" alt="Planet">
+        <h2>Mercury</h2>
+        <p>Discover the smallest planet in our solar system.</p>
+        <a href="https://youtu.be/0KBjnNuhRHs?si=ggitciVcczE0p9dC" target="_blank">Watch Video</a>
+    </div>
+
+    <div class="card">
+        <img src="venus.png" alt="Planet">
+        <h2>Venus</h2>
+        <p>Explore Venus, the second planet from the Sun.</p>
+        <a href="https://youtu.be/BvXa1n9fjow?si=k52meELyvruLbNrH" target="_blank">Watch Video</a>
+    </div>
+
+    <div class="card">
+        <img src="earth.png" alt="Planet">
+        <h2>Earth</h2>
+        <p>Learn about our home planet and its unique features.</p>
+        <a href="https://youtu.be/HCDVN7DCzYE?si=_xTK1hSLCrxD0Gbx" target="_blank">Watch Video</a>
+    </div>
+
+    <div class="card">
+        <img src="moon.png" alt="Planet">
+        <h2>The Moon</h2>
+        <p>Discover the Natural Satallite of Earth</p>
+        <a href="https://youtu.be/6AviDjR9mmo?si=y3BCTq9rQOzR_7Kg" target="_blank">Watch Video</a>
+    </div>
+
+    <div class="card">
+        <img src="mars.png" alt="Planet">
+        <h2>Mars</h2>
+        <p>The red planet and its potential for future human exploration.</p>
+        <a href="https://youtu.be/D8pnmwOXhoY?si=V_Y4yln3J7cDdC_q" target="_blank">Watch Video</a>
+    </div>
+
+    <div class="card">
+        <img src="jupiter.png" alt="Planet">
+        <h2>Jupiter</h2>
+        <p>Discover the largest planet in the solar system.</p>
+        <a href="https://youtu.be/PtkqwslbLY8?si=_0q0MUp56jXf1HM-" target="_blank">Watch Video</a>
+    </div>
+
+    <div class="card">
+        <img src="saturn.png" alt="Planet">
+        <h2>Saturn</h2>
+        <p>Learn about the majestic rings of Saturn.</p>
+        <a href="https://youtu.be/epZdZaEQhS0?si=QaQQc633lPI8wDP1" target="_blank">Watch Video</a>
+    </div>
+
+    <div class="card">
+        <img src="uranus.png" alt="Planet">
+        <h2>Uranus</h2>
+        <p>Explore the icy giant Uranus and its unique rotation.</p>
+        <a href="https://youtu.be/m4NXbFOiOGk?si=6mN6ibYWBsbQrlkJ" target="_blank">Watch Video</a>
+    </div>
+
+    <div class="card">
+        <img src="neptune.png" alt="Planet">
+        <h2>Neptune</h2>
+        <p>Learn about Neptune, the farthest planet from the Sun.</p>
+        <a href="https://youtu.be/NStn7zZKXfE?si=4202SzxH1n4LsGr9" target="_blank">Watch Video</a>
+    </div>
+
+    <!-- Cards for Black Hole, Nebula, and Stars -->
+    <div class="card">
+        <img src="blackhole.jfif" alt="Black Hole">
+        <h2>Black Holes</h2>
+        <p>Delve into the mysteries of black holes and their gravitational forces.</p>
+        <a href="https://youtu.be/kOEDG3j1bjs?si=PYI6dVA-msNDRIOV" target="_blank">Watch Video</a>
+    </div>
+
+    <div class="card">
+        <img src="nebula.jpg" alt="Nebula">
+        <h2>Nebulas</h2>
+        <p>Learn about nebulas, the birthplaces of stars.</p>
+        <a href="#" target="_blank">Watch Video</a>
+    </div>
+
+    <div class="card">
+        <img src="stars.jpg" alt="Stars">
+        <h2>Stars</h2>
+        <p>Explore the fascinating world of stars and their lifecycle.</p>
+        <a href="https://youtu.be/EFO_bsg1sw8?si=DSwRnMn8SNWYMLYH" target="_blank">Watch Video</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Ensile.</p>
+</footer>
+
+</body>
+</html>
