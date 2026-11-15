@@ -1,0 +1,163 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 35%, #24243e 100%); /* Dark gradient background */
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(43, 166, 207, 0.7) 100%); /* Dark gradient with a hint of blue */
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(43, 166, 207, 0.8), 0 0 20px rgba(43, 166, 207, 0.8), 0 0 30px rgba(43, 166, 207, 0.8); /* Glowing effect */
+}
+
+/* Section Titles */
+h2 {
+    font-size: 2rem;
+    color: rgb(43, 166, 207);
+    margin-bottom: 1rem;
+    font-weight: 600;
+
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: rgb(255, 180, 0);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
+}
+
+/* Main Content */
+main {
+    padding: 40px 10%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for better text contrast */
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+/* Navigation Styles */
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    background-color: #3b32b8;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #265b8b;
+    transform: scale(1.05);
+}
+
+/* List Styles */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: rgb(43, 166, 207);
+}
+
+/* Add subtle hover effects */
+ul li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Typography Enhancements */
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+p a {
+    color: rgb(43, 166, 207);
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    main {
+        padding: 20px 5%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 6px 15px;
+    }
+
+    ul li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    main {
+        padding: 15px;
+    }
+}
