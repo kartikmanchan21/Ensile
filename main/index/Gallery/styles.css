@@ -1,0 +1,124 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: url(sky.jpg) no-repeat center center fixed;
+   /* background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(29, 30, 24) 0%, rgb(107, 143, 113) 0%, rgb(170, 210, 186) 0%, rgb(217, 255, 245) 35%, rgb(185, 245, 216) 100%;*/
+  background-size: cover;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+  z-index: 1;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #e63946;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Planet Grid Styles */
+.planet-grid, .cosmic-grid, .constellation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  column-gap: 20px;
+  justify-items: center;
+  margin-bottom: 50px;
+}
+
+.planet, .cosmic-item, .constellation {
+  background-color: rgba(46, 46, 46, 0.8);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  backdrop-filter: blur(5px)
+}
+
+.planet:hover, .cosmic-item:hover, .constellation:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 209, 178, 0.3);
+}
+
+/* Image Styles for Planets, Cosmic Items, and Constellations */
+.planet-image, .cosmic-image, .constellation-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #eb5e28;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.planet-image:hover, .cosmic-image:hover, .constellation-image:hover {
+  transform: scale(1.1);
+}
+
+/* Titles and Descriptions */
+h2 {
+  font-size: 1.5rem;
+  color: #00d1b2;
+  margin-top: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+p {
+  font-size: 1rem;
+  color: #ddd;
+  margin-top: 10px;
+  line-height: 1.5;
+  padding: 0 10px;
+}
+
+/* Tooltip on hover */
+.planet:hover .planet-description {
+  display: block;
+}
+
+.planet-description {
+  display: none;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  transition: opacity 0.3s ease;
+}
+
+/* Fade-in effect when element scrolls into view */
+.planet, .cosmic-item, .constellation {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.planet.visible, .cosmic-item.visible, .constellation.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .planet-image, .cosmic-image, .constellation-image {
+    width: 150px;
+    height: 150px;
+  }
+}
