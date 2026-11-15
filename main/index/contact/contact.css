@@ -1,0 +1,199 @@
+/* Importing the Poppins font for consistent styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Body setup for space theme */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background: radial-gradient(circle, rgba(20, 20, 47, 1) 0%, rgba(10, 10, 30, 1) 100%);
+    background-size: cover;
+    color: white;
+    overflow: auto; /* Prevents overflow of starry background */
+    position: relative;
+}
+
+/* Starry background effect */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2016/12/01/05/58/space-1875392_960_720.jpg') repeat;
+    opacity: 0.5;
+    z-index: -1;
+    pointer-events: none; /* Prevents it from interacting with elements */
+}
+
+/* Header - Logo positioning */
+.header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)); /* Glow effect for logo */
+}
+
+/* Form Container */
+.ffbox {
+    display: flex;
+    width: 80%;
+    max-width: 800px;
+    background-color: rgba(0, 0, 50, 0.8); /* Semi-transparent dark blue background */
+    border: 2px solid #4f4f5c; /* Border in dark gray */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Glowing effect */
+    overflow: hidden;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    backdrop-filter: blur(5px); /* Creates a glass-like effect */
+}
+
+/* Form Fields */
+.ffbox1 {
+    flex: 1;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Labels */
+.ffbox1 label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #b0b0b0;
+}
+
+/* Input and textarea styling */
+.ffbox1 input,
+.ffbox1 textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly translucent white */
+    border: 1px solid #4f4f5c; /* Dark border */
+    color: white;
+    font-size: 1rem;
+}
+
+/* Input focus effect */
+.ffbox1 input:focus,
+.ffbox1 textarea:focus {
+    border-color: #5e5ecf; /* Bright blue border when focused */
+    outline: none;
+    box-shadow: 0 0 10px rgba(94, 94, 207, 0.7);
+}
+
+/* Submit button with glowing effect */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #5e5ecf;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(94, 94, 207, 0.5);
+}
+
+button:hover {
+    background-color: #3d3d9a;
+    box-shadow: 0 0 25px rgba(94, 94, 207, 0.8);
+}
+
+/* Textarea styling */
+.ffbox1 textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Map Section */
+.map-div {
+    flex: 1;
+    background-color: rgba(20, 20, 50, 0.7); /* Dark background for the map */
+    border-left: 2px solid #4f4f5c;
+}
+
+.map-div iframe {
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Text styles for the page */
+.gfg {
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+/* Make sure map section fits and doesn’t overlap with the form */
+.map-div {
+    background-color: rgba(20, 20, 50, 0.8); /* Spacey dark blue background */
+    padding: 20px;
+}
+
+h1 {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+h2 {
+    color: #ffffff;
+}
+
+/* Starry sky (optional - use if you want stars to be visible in the background) */
+@keyframes stars {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2015/11/07/11/24/space-1030621_960_720.jpg') repeat;
+    animation: stars 30s linear infinite;
+    z-index: -1;
+}
+
+/* Adding a subtle particle animation (for a galaxy effect) */
+@keyframes particle {
+    0% { transform: translate(0, 0); opacity: 0.7; }
+    50% { transform: translate(10px, 10px); opacity: 1; }
+    100% { transform: translate(0, 0); opacity: 0.7; }
+}
+
+/* Subtle star-like particles across the background */
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
+    animation: particle 3s linear infinite;
+    pointer-events: none;
+}
