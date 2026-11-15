@@ -1,0 +1,42 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #ffcc00;
+}
+
+.card {
+    background-color: #222;
+    border: none;
+}
+
+.card-title {
+    color: #ffcc00;
+}
+
+.card-text {
+    color: #ccc;
+}
+
+footer {
+    background-color: #222;
+}
+
+button {
+    background-color: rgb(59, 57, 169);
+    transition: background-color 0.3;
+}
+
+button:hover {
+    background-color: #002aff;
+    color: #000;
+}
+
+#space-fact {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffcc00;
+}
