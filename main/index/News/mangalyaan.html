@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandrayaan-1 Mission Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header styling */
+        header {
+            background: linear-gradient(135deg, #0066cc, #004a99);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 5px;
+            color: #d1e7ff;
+        }
+
+        /* Main container */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        h2 {
+            color: #005fa3;
+            font-size: 1.8rem;
+            margin-top: 0;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Details box with smooth transition */
+        .details-box {
+            background-color: #fff;
+            padding: 0;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+        }
+
+        .details-box.visible {
+            max-height: 500px; /* Adjust according to content */
+            padding: 15px;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 20px;
+            }
+
+            .container {
+                width: 100%;
+                padding: 0 10px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            button {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mangalyaan (Mars Orbiter Mission) Report</h1>
+        <p>India's First Mars Mission by ISRO</p>
+    </header>
+
+<div class="container">
+    <div class="section">
+        <h2>1. Mission Overview</h2>
+        <p>Mangalyaan, officially the Mars Orbiter Mission (MOM), was India’s first interplanetary mission, launched on November 5, 2013. It was designed to study the Martian atmosphere, surface, and mineral composition.</p>
+        <button onclick="toggleDetails('mangalyaan-overview')">Show Mission Details</button>
+        <div id="mangalyaan-overview" class="details-box hidden">
+            <p><strong>Launch Date:</strong> November 5, 2013</p>
+            <p><strong>Launch Vehicle:</strong> PSLV-C25</p>
+            <p><strong>Mission Duration:</strong> 6 months (Extended to ongoing)</p>
+            <p><strong>End Date:</strong> Ongoing, as of 2024</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>2. Mission Objectives</h2>
+        <p>The Mangalyaan mission was designed to:</p>
+        <button onclick="toggleDetails('mangalyaan-objectives')">Show Objectives</button>
+        <div id="mangalyaan-objectives" class="details-box hidden">
+            <ul>
+                <li>Study the Martian surface and mineral composition.</li>
+                <li>Understand the Martian atmosphere and weather patterns.</li>
+                <li>Examine methane levels in the Martian atmosphere.</li>
+                <li>Test technology for future interplanetary exploration.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="section">
+        <h2>3. Key Scientific Findings</h2>
+        <p>The mission has yielded key findings about the Martian surface and atmosphere:</p>
+        <button onclick="toggleDetails('mangalyaan-findings')">Show Findings</button>
+        <div id="mangalyaan-findings" class="details-box hidden">
+            <ul>
+                <li><strong>Methane Detection:</strong> The orbiter detected trace amounts of methane in the Martian atmosphere.</li>
+                <li><strong>Lunar Surface Mapping:</strong> Mangalyaan provided high-resolution images of the Martian surface.</li>
+                <li><strong>Dust Storm Patterns:</strong> The mission observed seasonal changes in Martian dust storms.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>4. Mission Timeline</h2>
+        <button onclick="toggleDetails('mangalyaan-timeline')">Show Timeline</button>
+        <div id="mangalyaan-timeline" class="details-box hidden">
+            <ul class="timeline">
+                <li><strong>November 5, 2013:</strong> Launched from Sriharikota.</li>
+                <li><strong>September 24, 2014:</strong> Successfully entered Mars orbit.</li>
+                <li><strong>Ongoing:</strong> Continues to send data to Earth and remains operational as of 2024.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>5. Challenges and Conclusion</h2>
+        <p>While the mission was a remarkable success, there were challenges:</p>
+        <button onclick="toggleDetails('mangalyaan-challenges')">Show Challenges</button>
+        <div id="mangalyaan-challenges" class="details-box hidden">
+            <ul>
+                <li><strong>Initial Budget Constraints:</strong> The mission was cost-effective, making it a remarkable achievement for India.</li>
+                <li><strong>Limited Communication:</strong> Communication with Mars is challenging due to the vast distance.</li>
+            </ul>
+        </div>
+        <p>Despite these challenges, the mission remains a significant milestone in India’s space exploration efforts.</p>
+    </div>
+
+    <div class="section">
+        <h2>6. Legacy and Impact</h2>
+        <p>India’s successful Mars mission showcased its technological expertise and proved that even with limited resources, great achievements are possible. The mission has laid the foundation for future interplanetary exploration by ISRO.</p>
+        <button onclick="toggleDetails('mangalyaan-legacy')">Show Legacy</button>
+        <div id="mangalyaan-legacy" class="details-box hidden">
+            <p>The Mars Orbiter Mission has inspired numerous space agencies around the world and will continue to influence Mars research for years to come.</p>
+        </div>
+    </div>
+    </div>
+</div>
+
+<script>
+    function toggleDetails(id) {
+        var element = document.getElementById(id);
+        element.classList.toggle('visible');
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandrayaan-1 Mission Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header styling */
+        header {
+            background: linear-gradient(135deg, #0066cc, #004a99);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 5px;
+            color: #d1e7ff;
+        }
+
+        /* Main container */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        h2 {
+            color: #005fa3;
+            font-size: 1.8rem;
+            margin-top: 0;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Details box with smooth transition */
+        .details-box {
+            background-color: #fff;
+            padding: 0;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+        }
+
+        .details-box.visible {
+            max-height: 500px; /* Adjust according to content */
+            padding: 15px;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 20px;
+            }
+
+            .container {
+                width: 100%;
+                padding: 0 10px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            button {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Chandrayaan-1 Mission Report</h1>
+    <p>India's First Lunar Mission by ISRO</p>
+</header>
+
+<div class="container">
+    <div class="section">
+        <h2>1. Mission Overview</h2>
+        <p>The Chandrayaan-1 mission was India's first mission to explore the Moon. Launched on October 22, 2008, it aimed to gather scientific data about the Moon’s surface, composition, and the presence of water ice. The mission was a significant milestone for India in the field of space exploration.</p>
+        <button onclick="toggleDetails('overview-details')">Show Mission Details</button>
+        <div id="overview-details" class="details-box">
+            <p><strong>Launch Date:</strong> October 22, 2008</p>
+            <p><strong>Launch Vehicle:</strong> PSLV-C11</p>
+            <p><strong>Mission Duration:</strong> 312 days (Planned for 2 years)</p>
+            <p><strong>End Date:</strong> August 29, 2009 (Communication lost)</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>2. Mission Objectives</h2>
+        <p>The Chandrayaan-1 mission had several key objectives:</p>
+        <button onclick="toggleDetails('objectives-details')">Show Objectives</button>
+        <div id="objectives-details" class="details-box">
+            <ul>
+                <li>Map the Moon's surface and create high-resolution 3D maps.</li>
+                <li>Search for water or ice, particularly in the lunar poles.</li>
+                <li>Study the mineral composition of the Moon’s surface.</li>
+                <li>Analyze the Moon’s exosphere and its interaction with the solar wind.</li>
+                <li>Demonstrate India’s capability in deep space exploration.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="section">
+        <h2>3. Key Scientific Findings</h2>
+        <p>Chandrayaan-1 made significant contributions to lunar science, with some of the most notable discoveries including the detection of water molecules on the Moon’s surface.</p>
+        <button onclick="toggleDetails('findings-details')">Show Findings</button>
+        <div id="findings-details" class="details-box hidden">
+            <ul>
+                <li><strong>Water Molecules:</strong> Discovery of water molecules in the form of hydroxyl (OH) on the Moon's surface, especially in the permanently shadowed craters near the poles.</li>
+                <li><strong>Lunar Surface Composition:</strong> Identified minerals such as plagioclase, pyroxenes, and olivine, shedding light on the Moon's geological history.</li>
+                <li><strong>Lunar Exosphere:</strong> Provided valuable data on the Moon's thin atmosphere and its interactions with solar wind.</li>
+                <li><strong>Polar Water Ice:</strong> The Mini-SAR detected signs of water ice in the Moon's polar regions.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>4. Mission Timeline</h2>
+        <button onclick="toggleDetails('timeline-details')">Show Timeline</button>
+        <div id="timeline-details" class="details-box hidden">
+            <ul class="timeline">
+                <li><strong>October 22, 2008:</strong> Launched from Sriharikota, India (PSLV-C11).</li>
+                <li><strong>November 8, 2008:</strong> Entered lunar orbit.</li>
+                <li><strong>November 14, 2008:</strong> Moon Impact Probe (MIP) was deployed and landed on the Moon.</li>
+                <li><strong>November 2008 - August 2009:</strong> Orbiter continued its scientific observations and data transmission.</li>
+                <li><strong>August 29, 2009:</strong> Communication with the orbiter was lost; mission officially ended.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>5. Challenges and Conclusion</h2>
+        <p>Despite being a highly successful mission, Chandrayaan-1 faced several challenges:</p>
+        <button onclick="toggleDetails('challenges-details')">Show Challenges</button>
+        <div id="challenges-details" class="details-box hidden">
+            <ul>
+                <li><strong>Communication Loss:</strong> The mission suffered a loss of communication in August 2009, ending the mission prematurely.</li>
+                <li><strong>Shortened Mission Duration:</strong> Although the mission was initially planned to last for 2 years, the loss of contact cut it short to just 312 days.</li>
+            </ul>
+        </div>
+        <p>However, despite these challenges, the mission proved to be a success, providing invaluable data that continues to influence lunar research.</p>
+    </div>
+
+    <div class="section">
+        <h2>6. Legacy and Impact</h2>
+        <p>Chandrayaan-1 was a monumental achievement for India and laid the groundwork for future lunar missions. It helped establish India’s capabilities in space exploration and contributed to a global understanding of the Moon.</p>
+        <button onclick="toggleDetails('legacy-details')">Show Legacy</button>
+        <div id="legacy-details" class="details-box hidden">
+            <p>The discoveries of water molecules and polar ice have opened up new possibilities for future lunar exploration and resource utilization, including potential manned missions to the Moon in the coming decades.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>7. Future Missions</h2>
+        <p>Following the success of Chandrayaan-1, ISRO launched Chandrayaan-2 in 2019, and there are plans for Chandrayaan-3 to further explore the lunar surface.</p>
+    </div>
+</div>
+    <!-- More sections here... -->
+
+</div>
+
+<script>
+    function toggleDetails(id) {
+        var element = document.getElementById(id);
+        element.classList.toggle('visible');
+    }
+</script>
+
+</body>
+</html>

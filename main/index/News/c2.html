@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandrayaan-1 Mission Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header styling */
+        header {
+            background: linear-gradient(135deg, #0066cc, #004a99);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 5px;
+            color: #d1e7ff;
+        }
+
+        /* Main container */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        h2 {
+            color: #005fa3;
+            font-size: 1.8rem;
+            margin-top: 0;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Details box with smooth transition */
+        .details-box {
+            background-color: #fff;
+            padding: 0;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+        }
+
+        .details-box.visible {
+            max-height: 500px; /* Adjust according to content */
+            padding: 15px;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 20px;
+            }
+
+            .container {
+                width: 100%;
+                padding: 0 10px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            button {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Chandrayaan-2 Mission Report</h1>
+        <p>India's Second Lunar Mission by ISRO</p>
+    </header>
+
+<div class="container">
+    <div class="section">
+        <h2>1. Mission Overview</h2>
+        <p>Chandrayaan-2 is India's second lunar exploration mission, launched on July 22, 2019. The primary goal was to explore the Moon’s south pole region, which is believed to have significant amounts of water ice.</p>
+        <button onclick="toggleDetails('chandrayaan2-overview')">Show Mission Details</button>
+        <div id="chandrayaan2-overview" class="details-box hidden">
+            <p><strong>Launch Date:</strong> July 22, 2019</p>
+            <p><strong>Launch Vehicle:</strong> GSLV Mk III</p>
+            <p><strong>Mission Duration:</strong> Planned for 1 year (Orbiter continues to operate)</p>
+            <p><strong>End Date:</strong> September 6, 2019 (Lander Vikram lost contact)</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>2. Mission Objectives</h2>
+        <p>The primary objectives of the Chandrayaan-2 mission were to explore the Moon’s South Pole region and search for water ice, among other scientific goals:</p>
+        <button onclick="toggleDetails('chandrayaan2-objectives')">Show Objectives</button>
+        <div id="chandrayaan2-objectives" class="details-box hidden">
+            <ul>
+                <li>Explore the Moon’s south pole region.</li>
+                <li>Search for water ice and study the lunar surface.</li>
+                <li>Study the mineral composition of the Moon using the orbiter and lander.</li>
+                <li>Test new technologies for future space exploration missions.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="section">
+        <h2>3. Key Scientific Findings</h2>
+        <p>Although the Vikram lander lost contact during its descent, the orbiter has continued to provide valuable data, contributing to lunar science:</p>
+        <button onclick="toggleDetails('chandrayaan2-findings')">Show Findings</button>
+        <div id="chandrayaan2-findings" class="details-box hidden">
+            <ul>
+                <li><strong>Water Ice:</strong> Evidence of water ice and hydroxyl on the Moon’s surface, particularly in the polar regions.</li>
+                <li><strong>Lunar Surface Composition:</strong> The orbiter continues to send data on the surface’s mineral composition.</li>
+                <li><strong>Lunar Exosphere:</strong> The orbiter's observations have provided insights into the Moon's thin atmosphere.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>4. Mission Timeline</h2>
+        <button onclick="toggleDetails('chandrayaan2-timeline')">Show Timeline</button>
+        <div id="chandrayaan2-timeline" class="details-box hidden">
+            <ul class="timeline">
+                <li><strong>July 22, 2019:</strong> Chandrayaan-2 launched from Sriharikota (GSLV Mk III).</li>
+                <li><strong>August 20, 2019:</strong> The orbiter successfully entered lunar orbit.</li>
+                <li><strong>September 6, 2019:</strong> The Vikram lander lost contact just before landing on the lunar surface.</li>
+                <li><strong>Ongoing:</strong> The orbiter continues to operate and send valuable data to Earth.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>5. Challenges and Conclusion</h2>
+        <p>The mission faced significant challenges, but it remains a significant achievement for ISRO:</p>
+        <button onclick="toggleDetails('chandrayaan2-challenges')">Show Challenges</button>
+        <div id="chandrayaan2-challenges" class="details-box hidden">
+            <ul>
+                <li><strong>Loss of Vikram Lander:</strong> The Vikram lander lost contact just before the soft landing attempt.</li>
+                <li><strong>Communication Challenges:</strong> The lander's communication failure was a major setback, but the orbiter’s success was still a huge milestone.</li>
+            </ul>
+        </div>
+        <p>Despite these setbacks, Chandrayaan-2 is regarded as a significant success for India’s space program and provides a solid foundation for future lunar missions.</p>
+    </div>
+
+    <div class="section">
+        <h2>6. Legacy and Impact</h2>
+        <p>Chandrayaan-2’s success in placing the orbiter in lunar orbit and continuing operations has paved the way for future missions, including Chandrayaan-3 and potential manned lunar missions.</p>
+        <button onclick="toggleDetails('chandrayaan2-legacy')">Show Legacy</button>
+        <div id="chandrayaan2-legacy" class="details-box hidden">
+            <p>The Chandrayaan-2 mission has contributed significantly to lunar exploration. The orbiter’s continued success and the lessons learned from the Vikram lander have made ISRO's future lunar missions stronger and more advanced.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleDetails(id) {
+        var element = document.getElementById(id);
+        element.classList.toggle('visible');
+    }
+</script>
+
+</body>
+</html>
